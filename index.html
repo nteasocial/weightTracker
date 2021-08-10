@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Weight Tracker App</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+  <section class="showcase">
+    <div class="container grid">
+      <div class="showcase-text">
+        <h1>Weight Tracker App</h1>
+         <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ducimus a eveniet molestias voluptates aliquam nam ipsam! Ab officiis maxime necessitatibus numquam vel eius dolorem, animi et, cupiditate doloribus quibusdam.</p>
+          <a href="index-2.html" class="btn btn-outline">Start here</a>
+      </div>
+      <div class="showcase-form card">
+          <!-- nETLIFY -->
+        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden">
+            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+          </p>
+          <!-- Heading -->
+        <h2>Welcome Here</h2>
+
+        <!-- form -->
+        <form>
+          <div class="form-control">
+            <input id="yourName" type="text" placeholder="Name"  autocomplete="on" required>
+          </div>
+          <div class="form-control">
+            <input id="txtEmail" type="email" placeholder="Email" required>
+          </div>
+          <div class="form-control">
+            <input id="txtpassword" type="password" placeholder="Password" required>
+          </div>
+
+          <button onclick="login()" class="btn">
+          <input id="btnLogin" type="submit" value="Log in" class="btn btn-action"></button>
+
+           <button class="btn"><input id="btnSignup" type="submit" value="Sign Up" class="btn btn-secondary"></button>
+
+          <button class="btn hide"><input id="btnLogout" type="submit" value="Log Out" class="btn btn-action hide "></button>
+        </form>
+       
+      </div>
+    </div>
+    </section>
+     
+    <footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+          <div>
+            <h1>🤖 Nteasocial</h1>
+            <p>Copyright &copy; 2021</p>
+          </div>
+  
+          <div class="social">
+            <a href="https://github.com/nteasocial"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.twitter.com/nteasocial/"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/shivani-nteasocial/"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://www.codepen.com/nteasocial/"><i class="fab fa-codepen fa-2x"></i></a>
+          </div>
+        </div>
+      </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyADiuxW6C2A6Gv_FqYg_2fkl819zEEYLSE",
+    authDomain: "weight-tracker-1823c.firebaseapp.com",
+    projectId: "weight-tracker-1823c",
+    storageBucket: "weight-tracker-1823c.appspot.com",
+    messagingSenderId: "613463631078",
+    appId: "1:613463631078:web:a748b8943fb190b6f94727",
+    measurementId: "G-F2YGNFG48P"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+    <script src="app.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

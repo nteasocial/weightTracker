@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --primary-color: rgb(148, 69, 221);
+  --secondary-color: rgb(164, 90, 233);
+  --dark-color: rgb(30, 4, 53);
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #cf411d;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.showcase-text a {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 10px;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase .grid {
+  overflow: visible;
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+}
+
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in;
+}
+
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+  animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+.showcase-form input[type="password"],
+.showcase-form input[type="email"],
+.showcase-form input[type="text"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-1deg);
+  -webkit-transform: skewY(-1deg);
+  -moz-transform: skewY(-1deg);
+  -ms-transform: skewY(-1deg);
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+/* Utilities */
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin: 10px;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.bg-dark,
+.btn-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+/* buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.btn-outline {
+  background-color: transparent;
+  border: 1px #fff solid;
+}
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.form-control button{
+  border:rgb(164, 90, 233);
+}
+
+
+/* Footer */
+
+.footer {
+  height: auto;
+}
+
+.footer p {
+  margin: 0px 10px;
+  padding: 10px;
+}
+.footer .social a {
+  padding: 0 10px;
+  margin: 0px 20px;
+  color: #fff;
+}
+
+.footer h1 {
+  padding: 20px;
+}
+
+/* Media queries */
+/* Tablet */
+@media (max-width: 768px) {
+  .grid,
+  .showcase .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto;
+  }
+
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+    animation: slideInFromTop 1s ease-in;
+  }
+
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+  }
+  /* index-2 */
+  #weight-input {
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .heading {
+    margin-top: 40px;
+  }
+
+  #main-content input[type="number"] {
+    padding: 10px;
+  }
+
+  .hide, .form-control button{
+    display: none;
+  }
+
+}
